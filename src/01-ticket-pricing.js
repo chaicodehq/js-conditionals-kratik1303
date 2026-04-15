@@ -1,3 +1,5 @@
+// import { Children } from "react";
+
 /**
  * 🎬 The Starlight Cinema
  *
@@ -24,6 +26,40 @@
  */
 export function getTicketPrice(age, isWeekend) {
   // Your code here
-  console.log('hii')
-  console.log('hello')
+  if (age<0 || typeof age !== 'number'){
+    return -1;
+  }
+let children = ( age >= 0 && age <= 12 )
+let teens = (age > 12 && age <= 17)
+let adults = (age > 17 && age <= 59)
+let seniors = (age >= 60)
+  if (!isWeekend){
+    if(children){
+      return 8;
+    }
+    else if( teens ) {
+      return 12 ;
+    }
+    else if(adults) {
+      return 15 ;
+    }
+    else {
+      return 10;
+    }
+  }
+  else {
+        if(children){
+      return 11;
+    }
+    else if( teens ) {
+      return 15 ;
+    }
+    else if(adults) {
+      return 18 ;
+    }
+    else {
+      return 13;
+    }
+  }
+
 }
