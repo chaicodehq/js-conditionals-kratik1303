@@ -24,4 +24,6 @@
  */
 export function getTicketPrice(age, isWeekend) {
   // Your code here
+  console.log('hii')
+  console.log('hello')
 }
