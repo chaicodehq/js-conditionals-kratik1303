@@ -22,5 +22,10 @@
  * @returns {string} The driving action to take
  */
 export function getTrafficAction(color) {
-  // Your code here
+  let c = color.toLowerCase()
+  if (c == 'green') return "GO"
+  else if(c == 'yellow') return "SLOW DOWN"
+  else if (c == 'red') return "STOP"
+  else if(c == "flashing red") return "STOP AND PROCEED WITH CAUTION"
+  else return "INVALID SIGNAL"
 }

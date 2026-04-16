@@ -27,4 +27,5 @@
  */
 export function checkPasswordStrength(password) {
   // Your code here
+  
 }
